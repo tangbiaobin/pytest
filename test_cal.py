@@ -20,7 +20,7 @@ import json
 def get_data(file_name=''):
     if file_name:
         path = 'D:/code/pytest/data/' + file_name
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             data = json.load(f)
             return data
     else:
