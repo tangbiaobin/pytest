@@ -1,0 +1,59 @@
+{
+  "uid" : "40de0d4d3102403c",
+  "name" : "test_b[3-2]",
+  "fullName" : "test_demo.TestDemo#test_b",
+  "historyId" : "f40c62937aa80793876a5cedd018a864",
+  "time" : {
+    "start" : 1615726260823,
+    "stop" : 1615726260823,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDemo"
+  }, {
+    "name" : "host",
+    "value" : "FDD-PZSTWIEXCFJ"
+  }, {
+    "name" : "thread",
+    "value" : "2028-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "2"
+  }, {
+    "name" : "b",
+    "value" : "3"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "40de0d4d3102403c.json",
+  "parameterValues" : [ "2", "3" ]
+}

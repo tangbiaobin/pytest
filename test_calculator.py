@@ -29,7 +29,7 @@ class TestCalculator:
         (2, 4, 5),
         (4, 7, 11)
     ])
-    def minus(self, a, b, exc):
+    def test_minus(self, a, b, exc):
         result = self.c.minus(a, b)
         assert result == exc
 
@@ -39,8 +39,8 @@ class TestCalculator:
         (2, 4, 5),
         (4, 7, 11)
     ])
-    def multiple(self, a, b, exc):
-        result = self.c.divide(a, b)
+    def test_multiple(self, a, b, exc):
+        result = self.c.multiple(a, b)
         assert result == exc
 
     # 除
@@ -49,9 +49,9 @@ class TestCalculator:
         (2, 4, 5),
         (4, 7, 11)
     ])
-    def divide(self, a, b, exc):
+    def test_divide(self, a, b, exc):
         if b != 0:
-            result = self.c.multiple(a, b)
+            result = self.c.divide(a, b)
             assert result == exc
         else:
             print("除数不能为0")

@@ -1,0 +1,95 @@
+{
+  "uid" : "610e360ec1e7e2b5",
+  "name" : "test_add[鍔犳硶娴嬭瘯1]",
+  "fullName" : "test_cal.TestCalculator1#test_add",
+  "historyId" : "eb8072249c5117292ef26d8c3189be33",
+  "time" : {
+    "start" : 1615726263071,
+    "stop" : 1615726263070,
+    "duration" : -1
+  },
+  "status" : "failed",
+  "statusMessage" : "pytest_assume.plugin.FailedAssumption: \n1 Failed Assumptions:\n\ntest_cal.py:98: AssumptionFailure\n>>\tpytest.assume(result == exc)\nAssertionError: assert False",
+  "statusTrace" : "tp = <class 'pytest_assume.plugin.FailedAssumption'>, value = None, tb = None\n\n    def reraise(tp, value, tb=None):\n        try:\n            if value is None:\n                value = tp()\n            if value.__traceback__ is not tb:\n>               raise value.with_traceback(tb)\nE               pytest_assume.plugin.FailedAssumption: \nE               1 Failed Assumptions:\nE               \nE               test_cal.py:98: AssumptionFailure\nE               >>\tpytest.assume(result == exc)\nE               AssertionError: assert False\n\nc:\\users\\fdd\\envs\\pytest\\lib\\site-packages\\six.py:702: FailedAssumption",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestCalculator1",
+    "time" : {
+      "start" : 1615726260979,
+      "stop" : 1615726260979,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestCalculator1::0",
+    "time" : {
+      "start" : 1615726263093,
+      "stop" : 1615726263093,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "flaky(reruns=2, reruns_delay=1)"
+  }, {
+    "name" : "suite",
+    "value" : "test_cal"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalculator1"
+  }, {
+    "name" : "host",
+    "value" : "FDD-PZSTWIEXCFJ"
+  }, {
+    "name" : "thread",
+    "value" : "2028-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "2"
+  }, {
+    "name" : "b",
+    "value" : "3"
+  }, {
+    "name" : "exc",
+    "value" : "4"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "flaky(reruns=2, reruns_delay=1)" ]
+  },
+  "source" : "610e360ec1e7e2b5.json",
+  "parameterValues" : [ "2", "3", "4" ]
+}

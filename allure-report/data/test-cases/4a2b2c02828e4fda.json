@@ -1,0 +1,65 @@
+{
+  "uid" : "4a2b2c02828e4fda",
+  "name" : "test_a[10-20]",
+  "fullName" : "test_demo.TestDemo#test_a",
+  "historyId" : "2f6fcde460723cb70ef5eee5e698f790",
+  "time" : {
+    "start" : 1615726260891,
+    "stop" : 1615726260891,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 10 == 20\n  +10\n  -20",
+  "statusTrace" : "self = <test_demo.TestDemo object at 0x0000017CA0F3C2B0>, a = 10, b = 20\n\n    @pytest.mark.parametrize('a,b', [\n        (10, 20),\n        (10, 10),\n        ('a', 'a1')\n    ])\n    def test_a(self, a, b):\n>       assert a == b\nE       assert 10 == 20\nE         +10\nE         -20\n\ntest_demo.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDemo"
+  }, {
+    "name" : "host",
+    "value" : "FDD-PZSTWIEXCFJ"
+  }, {
+    "name" : "thread",
+    "value" : "2028-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "10"
+  }, {
+    "name" : "b",
+    "value" : "20"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4a2b2c02828e4fda.json",
+  "parameterValues" : [ "10", "20" ]
+}

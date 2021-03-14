@@ -1,0 +1,98 @@
+{
+  "uid" : "725b94b283cb60ff",
+  "name" : "test_add[2-4-5]",
+  "fullName" : "test_calculator.TestCalculator#test_add",
+  "historyId" : "cbb434285b9572dcf1c70ab9c333ddba",
+  "time" : {
+    "start" : 1615726260967,
+    "stop" : 1615726260967,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 6 == 5\n  +6\n  -5",
+  "statusTrace" : "self = <test_calculator.TestCalculator object at 0x0000017CA0C714C0>, a = 2, b = 4, exc = 5\n\n    @pytest.mark.parametrize('a,b, exc', [\n        (1, 2, 3),\n        (2, 4, 5),\n        (4, 7, 11)\n    ])\n    def test_add(self, a, b, exc):\n        result = self.c.add(a, b)\n>       assert result == exc\nE       assert 6 == 5\nE         +6\nE         -5\n\ntest_calculator.py:24: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestCalculator",
+    "time" : {
+      "start" : 1615726260897,
+      "stop" : 1615726260897,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestCalculator::0",
+    "time" : {
+      "start" : 1615726260976,
+      "stop" : 1615726260977,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_calculator"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalculator"
+  }, {
+    "name" : "host",
+    "value" : "FDD-PZSTWIEXCFJ"
+  }, {
+    "name" : "thread",
+    "value" : "2028-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calculator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "2"
+  }, {
+    "name" : "b",
+    "value" : "4"
+  }, {
+    "name" : "exc",
+    "value" : "5"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "725b94b283cb60ff.json",
+  "parameterValues" : [ "2", "4", "5" ]
+}
