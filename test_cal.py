@@ -28,7 +28,7 @@ def get_data(file_name=''):
 
 
 # 使用【测试数据的数据驱动】的方法完成加减乘除测试
-class TestCalculator:
+class TestCalculator1:
 
     def setup_class(self):
         print("开始计算")
@@ -39,19 +39,19 @@ class TestCalculator:
 
     # 加
     # 这种参数化时值为list类型，若是dict类型则只取字典中的key
-    @pytest.mark.parametrize('a,b, exc', get_data("data.json")['param']["add"], ids=get_data("data.json")["ids"]["add"])
+    @pytest.mark.parametrize('a,b, exc', get_data("data.json")['cal']['param']["add"], ids=get_data("data.json")['cal']["ids"]["add"])
     # 失败重跑,设置重跑次数为2，延迟1s
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     # 设置用例执行顺序
-    @pytest.mark.run(order=1)
+    @pytest.mark.run(order=4)
     def test_add(self, a, b, exc):
         result = self.c.add(a, b)
-        # 设置多个断言:当设置多个断言时&失败重跑，只要存在断言失败即重跑
+        # 设置多个断言:当设置多个断言时，只要存在断言失败即重跑
         pytest.assume(result == exc)
         pytest.assume(result)
 
     # 减
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['minus'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['minus'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     @pytest.mark.run(order=2)
     def test_minus(self, a, b, exc):
@@ -59,9 +59,9 @@ class TestCalculator:
         assert result == exc
 
     # 除
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['divide'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['divide'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
-    @pytest.mark.run(order=4)
+    @pytest.mark.run(order=1)
     def test_divide(self, a, b, exc):
         if b != 0:
             result = self.c.divide(a, b)
@@ -70,7 +70,7 @@ class TestCalculator:
             print("除数不能为0")
 
     # 乘
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['mul'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['mul'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     @pytest.mark.run(order=3)
     def test_multiple(self, a, b, exc):
@@ -89,7 +89,7 @@ class TestCalculator1:
 
     # 加
     # 这种参数化时值为list类型，若是dict类型则只取字典中的key
-    @pytest.mark.parametrize('a,b, exc', get_data("data.json")['param']["add"], ids=get_data("data.json")["ids"]["add"])
+    @pytest.mark.parametrize('a,b, exc', get_data("data.json")['cal']['param']["add"], ids=get_data("data.json")['cal']["ids"]["add"])
     # 失败重跑,设置重跑次数为2，延迟1s
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     def test_add(self, a, b, exc):
@@ -99,14 +99,14 @@ class TestCalculator1:
         pytest.assume(result)
 
     # 减
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['minus'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['minus'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     def test_minus(self, a, b, exc):
         result = self.c.minus(a, b)
         assert result == exc
 
     # 除
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['divide'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['divide'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     def test_divide(self, a, b, exc):
         if b != 0:
@@ -116,7 +116,7 @@ class TestCalculator1:
             print("除数不能为0")
 
     # 乘
-    @pytest.mark.parametrize('a,b, exc', get_data('data.json')["param"]['mul'])
+    @pytest.mark.parametrize('a,b, exc', get_data('data.json')['cal']["param"]['mul'])
     @pytest.mark.flaky(reruns=2, reruns_delay=1)
     def test_multiple(self, a, b, exc):
         result = self.c.multiple(a, b)

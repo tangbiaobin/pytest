@@ -23,7 +23,7 @@ def get_random(request):
 
 
 def pytest_collection_modifyitems(session, config, items):
-    items.reverse()
+    # items.reverse()
     for item in items:
         item.name = item.name.encode('utf-8').decode('unicode-escape')
         item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')
@@ -64,7 +64,6 @@ def create_cases(param1, param2):
     n1 = len(param1) // len(param2)
     # 取余
     n2 = len(param1) % len(param2)
-    # 按照倍数扩充参数2
     param2_new = param2 * n1
     if n2 > 1:
         for i in range(n2):
@@ -77,7 +76,6 @@ def create_cases(param1, param2):
     return result
 
 
-l = [1,2,3]
-l1 = [1,2,3]
+l = [1, 2, 3]
+l1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(create_cases(l, l1))
-
